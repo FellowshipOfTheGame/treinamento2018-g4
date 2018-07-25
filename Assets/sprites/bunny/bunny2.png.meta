@@ -1,0 +1,300 @@
+fileFormatVersion: 2
+guid: 316fe0a0e0cc07e4198908457fc20aa4
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: bunny2_0
+    21300002: bunny2_1
+    21300004: bunny2_2
+    21300006: bunny2_3
+    21300008: bunny2_4
+    21300010: bunny2_5
+    21300012: bunny2_6
+    21300014: bunny2_7
+    21300016: bunny2_8
+    21300018: bunny2_9
+    21300020: bunny2_10
+    21300022: bunny2_11
+    21300024: bunny2_12
+    21300026: bunny2_13
+    21300028: bunny2_14
+    21300030: bunny2_15
+    21300032: bunny2_16
+    21300034: bunny2_17
+    21300036: bunny2_18
+    21300038: bunny2_19
+    21300040: bunny2_20
+    21300042: bunny2_21
+    21300044: bunny2_22
+    21300046: bunny2_23
+    21300048: bunny2_24
+    21300050: bunny2_25
+    21300052: bunny2_26
+    21300054: bunny2_27
+    21300056: bunny2_28
+    21300058: bunny2_29
+    21300060: bunny2_30
+    21300062: bunny2_31
+    21300064: bunny2_32
+    21300066: bunny2_33
+    21300068: bunny2_34
+    21300070: bunny2_35
+    21300072: bunny2_36
+    21300074: bunny2_37
+    21300076: bunny2_38
+    21300078: bunny2_39
+    21300080: bunny2_41
+    21300082: bunny2_42
+    21300084: bunny2_43
+    21300086: bunny2_50
+    21300088: bunny2_51
+  externalObjects: {}
+  serializedVersion: 5
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bunny2_6
+      rect:
+        serializedVersion: 2
+        x: 1586.8007
+        y: 2336.0527
+        width: 204.43787
+        height: 697.31494
+      alignment: 9
+      pivot: {x: 0.4314243, y: 0.49969855}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e29df255b52a91547941eafd73f0d023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny2_13
+      rect:
+        serializedVersion: 2
+        x: 1016.82477
+        y: 2378.5627
+        width: 371.7447
+        height: 611.40063
+      alignment: 9
+      pivot: {x: 0.49946976, y: 0.49793455}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac131cd70671b0345af6fd99b76c5374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny2_23
+      rect:
+        serializedVersion: 2
+        x: 253.0105
+        y: 2222.4722
+        width: 593.31335
+        height: 697.31494
+      alignment: 9
+      pivot: {x: 0.49971834, y: 0.4919267}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e4d32d50e3410c41a5b90c80ca25e05
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny2_38
+      rect:
+        serializedVersion: 2
+        x: 37.44762
+        y: 976.6251
+        width: 873.6655
+        height: 1203.7577
+      alignment: 9
+      pivot: {x: 0.49796215, y: 0.4991661}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b584f5f941b2784e9721bf410ee09da
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny2_41
+      rect:
+        serializedVersion: 2
+        x: 1366.9065
+        y: 1833.5618
+        width: 401.89014
+        height: 343.1067
+      alignment: 9
+      pivot: {x: 0.4953932, y: 0.49383613}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ba09f8ec0ecbcd43b3c5972a3cbb793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny2_43
+      rect:
+        serializedVersion: 2
+        x: 1366.9065
+        y: 1383.475
+        width: 462.1809
+        height: 373.25195
+      alignment: 9
+      pivot: {x: 0.49784294, y: 0.49437156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa9ad65276dc1f14c8adc259ca6af30d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny2_50
+      rect:
+        serializedVersion: 2
+        x: 280.1406
+        y: 546.7253
+        width: 566.1825
+        height: 352.15027
+      alignment: 9
+      pivot: {x: 0.4987074, y: 0.4991471}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10682125ca680364cabe0e0c8f26fab7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny2_51
+      rect:
+        serializedVersion: 2
+        x: 1210.155
+        y: 714.31
+        width: 557.1389
+        height: 542.0662
+      alignment: 9
+      pivot: {x: 0.4986996, y: 0.49752235}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15463a9b0e5a664419bc73eda33dd1e5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 1b9e948c7dd3d384bbecd6ccad44a561
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  userData: 636668504134376932
+  assetBundleName: 
+  assetBundleVariant: 
