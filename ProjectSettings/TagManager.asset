@@ -13,6 +13,7 @@ TagManager:
   - Obstacle
   - Cenario
   - Sensor
+  - EffectSound
   layers:
   - Default
   - TransparentFX
@@ -27,7 +28,7 @@ TagManager:
   - Bullet
   - KillingWall
   - Ground
-  - 
+  - enemy
   - 
   - 
   - 
@@ -53,6 +54,9 @@ TagManager:
   - name: Cenario
     uniqueID: 2087547253
     locked: 0
+  - name: Ground
+    uniqueID: 1725483859
+    locked: 0
   - name: Player
     uniqueID: 3394860517
     locked: 0
@@ -65,6 +69,6 @@ TagManager:
   - name: KillingWall
     uniqueID: 168738209
     locked: 0
-  - name: Ground
-    uniqueID: 1725483859
+  - name: Enemy
+    uniqueID: 1573278803
     locked: 0

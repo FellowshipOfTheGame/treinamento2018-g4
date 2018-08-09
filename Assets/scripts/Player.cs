@@ -9,7 +9,12 @@ public class Player : MonoBehaviour {
     SpriteRenderer sr;
     Rigidbody2D rb;
     public Camera cm;
+
+    public AudioSource backgroundSound;
+    public AudioSource jumpSound;
+    public AudioSource trashCollisionSound;
     
+
     public float jump_force;
     public float speed;
     public float climbSpeed;
@@ -63,6 +68,7 @@ public class Player : MonoBehaviour {
 
         if(collision.gameObject.tag == "Obstacle"){
             obstacleCollision = true;
+            trashCollisionSound.Play();
         }
 
         if(collision.gameObject.tag == "Sensor"){
@@ -140,6 +146,9 @@ public class Player : MonoBehaviour {
                 //garantia:
                 grounded = false;  // <<---
 
+                //jumping sound effect:
+                jumpSound.Play();
+
             }
 
             //CLIMBING __________________________________________________________________________
@@ -172,7 +181,7 @@ public class Player : MonoBehaviour {
                 }   
             }
 
-            //OBSTACLE COLLISION __________________________________________________________________________
+            //SENSOR COLLISION __________________________________________________________________________
             if(sensorCollision == true){
                 //new Vector3(15f, 0f, 0f) --> 15f because in KillingWall script thats the initial distance from player (if dist>23 enemy is destroied)
                 enemyIns = Instantiate(enemy, transform.position+(new Vector3(-11f, 0f, 0f)), Quaternion.identity);
@@ -204,5 +213,8 @@ public class Player : MonoBehaviour {
             y_previous_frame = y_now;
       
         } //ALL OF IT JUST HAPPENS IF PLAYER IS ALIVE
+        else{
+            backgroundSound.Stop();
+        }
 	}
 }

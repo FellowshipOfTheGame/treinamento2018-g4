@@ -9,6 +9,7 @@ public class EnemyShooting : MonoBehaviour {
 	public GameObject player;
 	//just for u to undertand, they were bullets, now they are lasers, byt variable name is still the same because i am lazy
 	public GameObject bullet;
+	public AudioSource laserSound;
 	GameObject bulletIns;
 
 	float distanceFromPlayer; //distance emeny has to be from the player
@@ -22,7 +23,7 @@ public class EnemyShooting : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		rend = GetComponent<Renderer>();
-		distanceFromPlayer =  15f; 
+		distanceFromPlayer = 15f; 
 		time = 0f;
 		speed = 0.1f;
 
@@ -42,6 +43,7 @@ public class EnemyShooting : MonoBehaviour {
 				//shot 3 times, wait, and do it again:
 				if(time <= 0.01) {
 					bulletIns = Instantiate(bullet, transform.position+(new Vector3(distBulletShooter, 0f, 0f)), Quaternion.identity);	
+					laserSound.Play();
 					shootCounter++;				
 				}
 

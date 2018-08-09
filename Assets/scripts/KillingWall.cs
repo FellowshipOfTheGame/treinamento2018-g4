@@ -32,8 +32,8 @@ public class KillingWall : MonoBehaviour {
 	void Start () {
 		player = GameObject.FindGameObjectWithTag("player");
 
-		distFromPlayer = 11f;
-		distInitial = 15f;
+		distFromPlayer = 9f;
+		distInitial = 12f;
 		initialForwardSpeed = 0.09f;
 		forwardSpeed = 0.14f;
 		backwardSpeed = 0.03f;
@@ -87,7 +87,7 @@ public class KillingWall : MonoBehaviour {
 		}
 		//if player reaches a wall, the killingWall disappear
 		else{
-			transform.position += new Vector3(-backwardSpeed*11 , 0f, 0f);
+			transform.position += new Vector3(-backwardSpeed*9 , 0f, 0f);
 		}
 
 		//if wall stops being redered, ir is destoied
