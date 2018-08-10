@@ -6,7 +6,6 @@ using UnityEngine.UI;
 using System;
 
 public class Player : MonoBehaviour {
-    SpriteRenderer sr;
     Rigidbody2D rb;
     public Camera cm;
 
@@ -96,7 +95,6 @@ public class Player : MonoBehaviour {
         cameraSpeed = 0.3f;
         jump_force = 2200f;
         gravityValue = 12;
-        sr = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
 		rb.gravityScale = gravityValue;
         distance_cm_player_x = Math.Abs(cm.transform.position.x - transform.position.x);
@@ -136,7 +134,6 @@ public class Player : MonoBehaviour {
             //forever running if is not in contact with a wall
             if (wallCollision == false && obstacleCollision == false) {
                 transform.position += new Vector3(speed, 0, 0);
-                sr.flipX = false;
             }
 
             //JUMP ____________________________________________________________________________
