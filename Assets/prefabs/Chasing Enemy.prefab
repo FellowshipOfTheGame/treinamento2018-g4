@@ -135,6 +135,8 @@ GameObject:
   - component: {fileID: 4669080503720736}
   - component: {fileID: 114752772002835722}
   - component: {fileID: 95371072446666862}
+  - component: {fileID: 82304655614911708}
+  - component: {fileID: 114544331464539588}
   m_Layer: 0
   m_Name: Green Pig
   m_TagString: Untagged
@@ -812,6 +814,101 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!82 &82304655614911708
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1315466633294880}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: d897eb978b5bf3f4c8ae23bc8e936173, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.7
+  m_Pitch: 0.3
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!95 &95371072446666862
 Animator:
   serializedVersion: 3
@@ -1084,6 +1181,19 @@ MonoBehaviour:
     m_RestoreDefaultPose: 1
     targetPosition: {x: -0.065525055, y: -2.5981302, z: -0.009597692}
     flip: 0
+--- !u!114 &114544331464539588
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1315466633294880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 781e17733f8f22e4fb9bd641ba48d586, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  step1: {fileID: 82304655614911708}
+  step2: {fileID: 0}
 --- !u!114 &114659978462423536
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1340,7 +1450,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 43374617750623062, guid: c84a33b047452914ea63fe872b1a533a, type: 2}
+  m_Mesh: {fileID: 0}
   m_Bones:
   - {fileID: 4443986647925400}
   - {fileID: 4479043992691774}
@@ -1389,7 +1499,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 43093559187934000, guid: 6832fb40c07be55409a6987e3764295d, type: 2}
+  m_Mesh: {fileID: 0}
   m_Bones:
   - {fileID: 4092787522476084}
   m_BlendShapeWeights: []
@@ -1437,7 +1547,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 43465808961275642, guid: a4493f9555f28cc4f8ac2ab57ece3e88, type: 2}
+  m_Mesh: {fileID: 0}
   m_Bones:
   - {fileID: 4799981299260602}
   m_BlendShapeWeights: []
@@ -1485,7 +1595,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 43934445635164070, guid: f148cde15270f1c40b1717aede714f1c, type: 2}
+  m_Mesh: {fileID: 0}
   m_Bones:
   - {fileID: 4105450613341568}
   - {fileID: 4634638882462084}
@@ -1534,7 +1644,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 43660399206215940, guid: 7199af8e29d80bd4c89f38703e71c0fb, type: 2}
+  m_Mesh: {fileID: 0}
   m_Bones:
   - {fileID: 4795426756701296}
   - {fileID: 4151748429210876}
@@ -1583,7 +1693,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 43048876363350774, guid: 6db83c404a2f25740a6953a8c97e3e01, type: 2}
+  m_Mesh: {fileID: 0}
   m_Bones:
   - {fileID: 4895639081353716}
   m_BlendShapeWeights: []
