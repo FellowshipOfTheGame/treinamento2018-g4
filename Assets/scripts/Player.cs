@@ -86,6 +86,7 @@ public class Player : MonoBehaviour {
             Debug.Log("Ground collision: "+groundCollision);
         }
     }
+    
  
     //---------------------------------------------------------------------------------
     // Use this for initialization
