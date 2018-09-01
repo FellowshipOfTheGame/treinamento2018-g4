@@ -48,6 +48,10 @@ public class Player : MonoBehaviour {
     public GameObject enemy;
     GameObject enemyIns;
 
+    //animation
+    public Animator anim;
+    private float VSpeed;
+
     //---------------------------------------------------------------------------------
     private void OnCollisionEnter2D(Collision2D collision){
         //colliding with the wall:
@@ -107,11 +111,19 @@ public class Player : MonoBehaviour {
         speedBackAux = speedBack;
         accelerationBack = 0.005f;
 
+
+        anim = GetComponentInChildren<Animator>();
     }
 	
 	//---------------------------------------------------------------------------------
     // Update is called once per frame
     void Update () {
+
+
+        // Updating animator vertical speed, ground check and climb check
+        anim.SetFloat("VSpeed", rb.velocity.y);
+        anim.SetBool("Ground", grounded);
+        anim.SetBool("Climb", wallCollision);
 
         if(alive == true){
 
