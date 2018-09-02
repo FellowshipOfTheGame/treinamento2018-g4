@@ -122,9 +122,9 @@ public class Player : MonoBehaviour {
 
         // Updating animator vertical speed, ground check and climb check
         anim.SetFloat("VSpeed", rb.velocity.y);
-        anim.SetFloat("ClimbSpeed", rb.velocity.y);
         anim.SetBool("Ground", grounded);
         anim.SetBool("Climb", wallCollision);
+        anim.SetBool("Alive", alive);
 
         if(alive == true){
 
