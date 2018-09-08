@@ -2041,8 +2041,6 @@ GameObject:
   - component: {fileID: 445359558}
   - component: {fileID: 445359557}
   - component: {fileID: 445359556}
-  - component: {fileID: 445359555}
-  - component: {fileID: 445359554}
   m_Layer: 13
   m_Name: Drone3
   m_TagString: enemy
@@ -2063,38 +2061,6 @@ Transform:
   m_Father: {fileID: 141090989}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!111 &445359554
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 445359552}
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: bed032c1dd9be0a4991d9dd3a52e8e93, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
---- !u!95 &445359555
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 445359552}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c1dc2f6ca89f6834e86bf008599835ea, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!61 &445359556
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2569,8 +2535,6 @@ GameObject:
   - component: {fileID: 499591358}
   - component: {fileID: 499591357}
   - component: {fileID: 499591356}
-  - component: {fileID: 499591355}
-  - component: {fileID: 499591354}
   m_Layer: 13
   m_Name: Drone4 (1)
   m_TagString: enemy
@@ -2591,38 +2555,6 @@ Transform:
   m_Father: {fileID: 141090989}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!111 &499591354
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 499591352}
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: bed032c1dd9be0a4991d9dd3a52e8e93, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
---- !u!95 &499591355
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 499591352}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c1dc2f6ca89f6834e86bf008599835ea, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!61 &499591356
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3784,8 +3716,6 @@ GameObject:
   - component: {fileID: 641635689}
   - component: {fileID: 641635688}
   - component: {fileID: 641635687}
-  - component: {fileID: 641635686}
-  - component: {fileID: 641635685}
   m_Layer: 13
   m_Name: Drone2
   m_TagString: enemy
@@ -3806,38 +3736,6 @@ Transform:
   m_Father: {fileID: 141090989}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!111 &641635685
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 641635683}
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: bed032c1dd9be0a4991d9dd3a52e8e93, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
---- !u!95 &641635686
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 641635683}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c1dc2f6ca89f6834e86bf008599835ea, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!61 &641635687
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4149,8 +4047,6 @@ GameObject:
   - component: {fileID: 673054165}
   - component: {fileID: 673054164}
   - component: {fileID: 673054163}
-  - component: {fileID: 673054162}
-  - component: {fileID: 673054161}
   m_Layer: 13
   m_Name: Drone3
   m_TagString: enemy
@@ -4171,38 +4067,6 @@ Transform:
   m_Father: {fileID: 141090989}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!111 &673054161
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 673054159}
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: bed032c1dd9be0a4991d9dd3a52e8e93, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
---- !u!95 &673054162
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 673054159}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c1dc2f6ca89f6834e86bf008599835ea, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!61 &673054163
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4751,21 +4615,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 137080627087837708, guid: 3b3ae98afad345a4b8a63af224c02dde,
-        type: 2}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 137923254874088404, guid: 3b3ae98afad345a4b8a63af224c02dde,
-        type: 2}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 137852440995250122, guid: 3b3ae98afad345a4b8a63af224c02dde,
-        type: 2}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 137372449712035598, guid: 3b3ae98afad345a4b8a63af224c02dde,
         type: 2}
       propertyPath: m_Mesh
@@ -4781,7 +4630,22 @@ Prefab:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 137852440995250122, guid: 3b3ae98afad345a4b8a63af224c02dde,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 137050888468077846, guid: 3b3ae98afad345a4b8a63af224c02dde,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 137923254874088404, guid: 3b3ae98afad345a4b8a63af224c02dde,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 137080627087837708, guid: 3b3ae98afad345a4b8a63af224c02dde,
         type: 2}
       propertyPath: m_Mesh
       value: 
@@ -4790,10 +4654,6 @@ Prefab:
         type: 2}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1844080920187900, guid: 3b3ae98afad345a4b8a63af224c02dde, type: 2}
-      propertyPath: m_Name
-      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 114484081439547670, guid: 3b3ae98afad345a4b8a63af224c02dde,
         type: 2}
@@ -6822,8 +6682,6 @@ GameObject:
   - component: {fileID: 1173421968}
   - component: {fileID: 1173421967}
   - component: {fileID: 1173421966}
-  - component: {fileID: 1173421965}
-  - component: {fileID: 1173421964}
   m_Layer: 13
   m_Name: Drone4
   m_TagString: enemy
@@ -6844,38 +6702,6 @@ Transform:
   m_Father: {fileID: 141090989}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!111 &1173421964
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1173421962}
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: bed032c1dd9be0a4991d9dd3a52e8e93, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
---- !u!95 &1173421965
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1173421962}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c1dc2f6ca89f6834e86bf008599835ea, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!61 &1173421966
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7558,8 +7384,6 @@ GameObject:
   - component: {fileID: 1286118287}
   - component: {fileID: 1286118284}
   - component: {fileID: 1286118283}
-  - component: {fileID: 1286118289}
-  - component: {fileID: 1286118288}
   m_Layer: 13
   m_Name: Drone
   m_TagString: enemy
@@ -7762,38 +7586,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!111 &1286118288
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1286118282}
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: bed032c1dd9be0a4991d9dd3a52e8e93, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
---- !u!95 &1286118289
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1286118282}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c1dc2f6ca89f6834e86bf008599835ea, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1293056099
 Prefab:
   m_ObjectHideFlags: 0
@@ -8214,8 +8006,6 @@ GameObject:
   - component: {fileID: 1403053631}
   - component: {fileID: 1403053630}
   - component: {fileID: 1403053629}
-  - component: {fileID: 1403053628}
-  - component: {fileID: 1403053627}
   m_Layer: 13
   m_Name: Drone4 (2)
   m_TagString: enemy
@@ -8236,38 +8026,6 @@ Transform:
   m_Father: {fileID: 141090989}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!111 &1403053627
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1403053625}
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: bed032c1dd9be0a4991d9dd3a52e8e93, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
---- !u!95 &1403053628
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1403053625}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c1dc2f6ca89f6834e86bf008599835ea, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!61 &1403053629
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8785,8 +8543,6 @@ GameObject:
   - component: {fileID: 1450430681}
   - component: {fileID: 1450430680}
   - component: {fileID: 1450430679}
-  - component: {fileID: 1450430678}
-  - component: {fileID: 1450430677}
   m_Layer: 13
   m_Name: Drone4 (3)
   m_TagString: enemy
@@ -8807,38 +8563,6 @@ Transform:
   m_Father: {fileID: 141090989}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!111 &1450430677
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1450430675}
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: bed032c1dd9be0a4991d9dd3a52e8e93, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
---- !u!95 &1450430678
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1450430675}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c1dc2f6ca89f6834e86bf008599835ea, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!61 &1450430679
 BoxCollider2D:
   m_ObjectHideFlags: 0
