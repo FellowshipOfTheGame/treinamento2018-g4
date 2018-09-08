@@ -48,11 +48,16 @@ public class Player : MonoBehaviour {
     public GameObject enemy;
     GameObject enemyIns;
 
+    //animation
+    public Animator anim;
+    private float VSpeed;
+
     //---------------------------------------------------------------------------------
     private void OnCollisionEnter2D(Collision2D collision){
         //colliding with the wall:
         if (collision.gameObject.tag == "wall") {
             wallCollision = true;
+            climb = true;
             Debug.Log("wall in: "+wallCollision);
         }
 
@@ -92,7 +97,7 @@ public class Player : MonoBehaviour {
     // Use this for initialization
     void Start () {
         speed = 0.2f;
-        climbSpeed = 0.6f;
+        climbSpeed = 30f;
         cameraSpeed = 0.3f;
         jump_force = 2200f;
         gravityValue = 12;
@@ -107,11 +112,20 @@ public class Player : MonoBehaviour {
         speedBackAux = speedBack;
         accelerationBack = 0.005f;
 
+
+
+        anim = GetComponentInChildren<Animator>();
     }
 	
 	//---------------------------------------------------------------------------------
     // Update is called once per frame
     void Update () {
+
+        // Updating animator vertical speed, ground check and climb check
+        anim.SetFloat("VSpeed", rb.velocity.y);
+        anim.SetBool("Ground", grounded);
+        anim.SetBool("Climb", wallCollision);
+        anim.SetBool("Alive", alive);
 
         if(alive == true){
 
@@ -150,15 +164,22 @@ public class Player : MonoBehaviour {
             }
 
             //CLIMBING __________________________________________________________________________
-
+            // adjusting gravity speed
+    	    if (climb == true){
+                if(rb.velocity.y <= 0) {
+                    rb.velocity = new Vector2(0f, 0f);
+                    rb.gravityScale = 0f; //set gravity to 0f
+                }
+            }
             //if player is touching a wall and presses  "G" to go up
-            if(wallCollision == true && Input.GetKey(KeyCode.G)){
-                rb.velocity = new Vector2(0f, 0f);
+            if(wallCollision == true && Input.GetKey(KeyCode.G) && (rb.velocity.y <= 0)){
                 climb = true;
-                rb.gravityScale = 0;
-                cameraAlignment = true;
-                cm.transform.position += new Vector3(0, climbSpeed, 0); 
-                transform.position += new Vector3(0, climbSpeed, 0);
+                rb.velocity = new Vector2(0f, 0f); //set speed to 0
+                rb.gravityScale = gravityValue; //set gravity to 0f
+                rb.velocity = new Vector2(0f, climbSpeed);
+                // cameraAlignment = true;
+                // cm.transform.position += new Vector3(0, climbSpeed, 0); //moves camera up 
+                // transform.position += new Vector3(0, climbSpeed, 0); //moves object up
             }
             //if player ended climbing
             else if(climb == true && wallCollision == false){
