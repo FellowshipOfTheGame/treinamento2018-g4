@@ -6,6 +6,7 @@ public class KillingWall : MonoBehaviour {
 
 	//has to be the same speed as the player's 
 	GameObject player;
+	Renderer rend;
 	Player playerScript;
 	float distFromPlayer;
 	float distInitial;
@@ -25,25 +26,31 @@ public class KillingWall : MonoBehaviour {
 		if(collision.gameObject.tag == "player"){
 			killPlayer = true;
 		}
+		if(collision.gameObject.tag == "wall"){
+			wallCollision = true;
+		}
 	}
 
 
 	// Use this for initialization ------------------------------------------------------------------
 	void Start () {
 		player = GameObject.FindGameObjectWithTag("player");
+		rend = GetComponent<Renderer>();
 
-		distFromPlayer = 9f;
-		distInitial = 12f;
+		distFromPlayer = 8.5f;
+		distInitial = 13f;
 		initialForwardSpeed = 0.09f;
-		forwardSpeed = 0.14f;
+		forwardSpeed = 0.12f;
 		backwardSpeed = 0.03f;
 		playerScript = player.gameObject.GetComponent<Player>();
-		transform.position = new Vector3(player.transform.position.x-distInitial, transform.position.y, 0f);
+		transform.position = new Vector3(player.transform.position.x-distInitial, transform.position.y+1.5f, 0f);
 
 		//so that wall only collides with player
         Physics2D.IgnoreLayerCollision(11, 8, true);
         Physics2D.IgnoreLayerCollision(11, 10, true);		        
 		Physics2D.IgnoreLayerCollision(11, 12, true);
+		Physics2D.IgnoreLayerCollision(11, 14, true);
+
 
 		rb = GetComponent<Rigidbody2D>();
 		rb.gravityScale = 12;
@@ -53,9 +60,7 @@ public class KillingWall : MonoBehaviour {
 	// Update is called once per frame ----------------------------------------------------------------
 	void Update () {
 
-		if(playerScript.wallCollision == true) wallCollision = true;
-
-		if(playerScript.alive == true && wallCollision == false){
+		if(playerScript.alive == true ){
 
 			//showing up on screen:
 			if(showingUp == true){
@@ -85,13 +90,11 @@ public class KillingWall : MonoBehaviour {
 			}//end else
 
 		}
-		//if player reaches a wall, the killingWall disappear
-		else{
-			transform.position += new Vector3(-backwardSpeed*9 , 0f, 0f);
-		}
 
-		//if wall stops being redered, ir is destoied
-		if(Mathf.Abs(transform.position.x-player.transform.position.x) > 17){
+
+
+		//if wall is in a certain distance from the player or if it collides with a wall and stop being rendered, it is destroied
+		if(Mathf.Abs(transform.position.x-player.transform.position.x) > 17 || (wallCollision == true && rend.isVisible == false) ){
 			Destroy(this.gameObject);
 		}
 

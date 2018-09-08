@@ -48,16 +48,11 @@ public class Player : MonoBehaviour {
     public GameObject enemy;
     GameObject enemyIns;
 
-    //animation
-    public Animator anim;
-    private float VSpeed;
-
     //---------------------------------------------------------------------------------
     private void OnCollisionEnter2D(Collision2D collision){
         //colliding with the wall:
         if (collision.gameObject.tag == "wall") {
             wallCollision = true;
-            climb = true;
             Debug.Log("wall in: "+wallCollision);
         }
 
@@ -97,7 +92,7 @@ public class Player : MonoBehaviour {
     // Use this for initialization
     void Start () {
         speed = 0.2f;
-        climbSpeed = 30f;
+        climbSpeed = 0.6f;
         cameraSpeed = 0.3f;
         jump_force = 2200f;
         gravityValue = 12;
@@ -112,19 +107,11 @@ public class Player : MonoBehaviour {
         speedBackAux = speedBack;
         accelerationBack = 0.005f;
 
-
-        anim = GetComponentInChildren<Animator>();
     }
 	
 	//---------------------------------------------------------------------------------
     // Update is called once per frame
     void Update () {
-
-        // Updating animator vertical speed, ground check and climb check
-        anim.SetFloat("VSpeed", rb.velocity.y);
-        anim.SetBool("Ground", grounded);
-        anim.SetBool("Climb", wallCollision);
-        anim.SetBool("Alive", alive);
 
         if(alive == true){
 
@@ -132,7 +119,7 @@ public class Player : MonoBehaviour {
             //CONTROLLING GROUND COLLISION _______________________________________________________
             // do it by comparing y axis position in this frame and the one of the previous frame
             y_now = transform.position.y;
-            if((int)(y_now*10000) != (int)(y_previous_frame*10000) ){ //comparing 1 decimal place
+            if((int)(y_now*1000) != (int)(y_previous_frame*1000) ){ //comparing 1 decimal place
                 if(grounded == true) {
                     grounded = false;
                 }
@@ -163,22 +150,15 @@ public class Player : MonoBehaviour {
             }
 
             //CLIMBING __________________________________________________________________________
-            // adjusting gravity speed
-    	    if (climb == true){
-                if(rb.velocity.y <= 0) {
-                    rb.velocity = new Vector2(0f, 0f);
-                    rb.gravityScale = 0f; //set gravity to 0f
-                }
-            }
+
             //if player is touching a wall and presses  "G" to go up
-            if(wallCollision == true && Input.GetKey(KeyCode.G) && (rb.velocity.y <= 0)){
+            if(wallCollision == true && Input.GetKey(KeyCode.G)){
+                rb.velocity = new Vector2(0f, 0f);
                 climb = true;
-                rb.velocity = new Vector2(0f, 0f); //set speed to 0
-                rb.gravityScale = gravityValue; //set gravity to 0f
-                rb.velocity = new Vector2(0f, climbSpeed);
-                // cameraAlignment = true;
-                // cm.transform.position += new Vector3(0, climbSpeed, 0); //moves camera up 
-                // transform.position += new Vector3(0, climbSpeed, 0); //moves object up
+                rb.gravityScale = 0;
+                cameraAlignment = true;
+                cm.transform.position += new Vector3(0, climbSpeed, 0); 
+                transform.position += new Vector3(0, climbSpeed, 0);
             }
             //if player ended climbing
             else if(climb == true && wallCollision == false){

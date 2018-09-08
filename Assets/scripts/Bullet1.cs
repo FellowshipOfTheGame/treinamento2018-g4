@@ -25,7 +25,7 @@ public class Bullet1 : MonoBehaviour {
 	void Start () {
 		rb = GetComponent<Rigidbody2D>();
 		rend = GetComponent<Renderer>();
-		speed = 0.25f;
+		speed = 0.3f;
 	}
 	
 	//-------------------------------------------------------------------------------------------

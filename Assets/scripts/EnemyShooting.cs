@@ -16,18 +16,18 @@ public class EnemyShooting : MonoBehaviour {
 	float distBulletShooter;
 	float time;
 	float speed;
-	int numberOfShoots;
+	public int numberOfShoots;
 	int shootCounter;
+	public float timeForShooting;
 
 	//---------------------------------------------------------------
 	// Use this for initialization
 	void Start () {
 		rend = GetComponent<Renderer>();
-		distanceFromPlayer = 15f; 
+		distanceFromPlayer = 17f; 
 		time = 0f;
 		speed = 0.1f;
 
-		numberOfShoots = 3;
 		shootCounter = 0;
 		distBulletShooter = -0.5f;
 	}
@@ -50,7 +50,7 @@ public class EnemyShooting : MonoBehaviour {
 				//walking:
 				transform.position = new Vector3(player.transform.position.x + distanceFromPlayer, transform.position.y, 0f);
 				time += Time.deltaTime;
-				if(time >= 2.5f) time = 0f;
+				if(time >= timeForShooting) time = 0f;
 			}
 
 		}
