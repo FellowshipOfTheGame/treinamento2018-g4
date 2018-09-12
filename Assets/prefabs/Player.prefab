@@ -1821,6 +1821,7 @@ MonoBehaviour:
   speedBackAux: 0
   enemy: {fileID: 1960879003088898, guid: b284e9bd2a15a23419bb7a6d1618c937, type: 2}
   anim: {fileID: 0}
+  ui: {fileID: 0}
 --- !u!114 &114493958087178802
 MonoBehaviour:
   m_ObjectHideFlags: 1

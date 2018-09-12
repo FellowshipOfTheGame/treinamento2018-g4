@@ -8,7 +8,12 @@ public class UiController : MonoBehaviour {
 
 	public bool paused;
 	public GameObject PausePanel;
+	public GameObject GameOverPanel;
 	public Player player;
+
+	Button[] options;
+	Button[] optionsGameOver; // game over menu options
+	int selected;
 
 	public void playButton() {
 		//Unpauses game
@@ -17,6 +22,7 @@ public class UiController : MonoBehaviour {
 		//todo
 		//disables pause
 		PausePanel.SetActive(false);
+		GameOverPanel.SetActive(false);
 		paused = false;
 	}
 
@@ -33,12 +39,22 @@ public class UiController : MonoBehaviour {
 		Time.timeScale = 1;
 	}
 
+	private void Start() {
+		options = PausePanel.GetComponentsInChildren<Button>();
+		optionsGameOver = GameOverPanel.GetComponentsInChildren<Button>();
+		selected = 0;
+	}
+
+	public void GameOver() {
+		selected = 0;
+		paused = true;
+		Time.timeScale = 0;
+		GameOverPanel.SetActive(true);
+	}
+
 	private void Update() {
 		if(Input.GetKeyDown(KeyCode.Escape)){
-			//if pause already has been pressed
-			if(PausePanel.active){
-				playButton();
-			} else {
+			if(!PausePanel.activeSelf && !GameOverPanel.activeSelf){
 				//pauses game
 				paused = true;
 				Time.timeScale = 0;
@@ -46,7 +62,39 @@ public class UiController : MonoBehaviour {
 				//todo
 				//sets pause panel to active
 				PausePanel.SetActive(true);
+			} else if (!GameOverPanel.activeSelf){
+				playButton();
 			}
+		}
+		if(PausePanel.activeSelf){
+			//if game is paused, check for inputs to cycle between options
+			if(Input.GetKeyDown(KeyCode.LeftArrow)){
+				selected -= 1;
+				if(selected <= -1) selected = 2;
+			} else if(Input.GetKeyDown(KeyCode.RightArrow)){
+				selected += 1;
+				if(selected >= 3) selected = 0;
+			} else if(Input.GetKeyDown(KeyCode.KeypadEnter)){
+				//push button
+				options[selected].onClick.Invoke();
+			}
+			// Selecting current button
+			options[selected].Select();
+		}
+		if(GameOverPanel.activeSelf){
+			//if game is paused, check for inputs to cycle between options
+			if(Input.GetKeyDown(KeyCode.UpArrow)){
+				selected -= 1;
+				if(selected <= -1) selected = 1;
+			} else if(Input.GetKeyDown(KeyCode.DownArrow)){
+				selected += 1;
+				if(selected >= 2) selected = 0;
+			} else if(Input.GetKeyDown(KeyCode.KeypadEnter)){
+				//push button
+				optionsGameOver[selected].onClick.Invoke();
+			}
+			// Selecting current button
+			optionsGameOver[selected].Select();
 		}
 	}
 
