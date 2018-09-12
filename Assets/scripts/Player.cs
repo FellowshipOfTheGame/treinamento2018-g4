@@ -55,14 +55,26 @@ public class Player : MonoBehaviour {
 
     //Ui control for game over
     public UiController ui;
+    bool win;
 
     //---------------------------------------------------------------------------------
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.tag == "Sensor"){
             sensorCollision = true;
         }
+        if(other.gameObject.tag == "Finish"){
+            if(!win){
+                backgroundSound.Stop();
+                win = true;
+            } else {
+                ui.Win();
+            }
+        }
     }
-
+    
+    void myGameOverCall(){
+        ui.GameOver();
+    }
 
     private void OnCollisionEnter2D(Collision2D collision){
         //colliding with the wall:
@@ -74,17 +86,22 @@ public class Player : MonoBehaviour {
 
         if(groundCollision==false && collision.gameObject.tag == "ground"){
             groundCollision = true;
+            grounded = true;
             Debug.Log("Ground collision: "+groundCollision);
         }
 
         if(collision.gameObject.tag == "bullet"){
             alive = false;
-            ui.GameOver();
+            backgroundSound.Stop();
+            ui.deathSound.Play();
+            Invoke("myGameOverCall",0.7f);
         }
 
         if(collision.gameObject.tag == "killingWall"){
             alive = false;
-            ui.GameOver();
+            backgroundSound.Stop();
+            ui.deathSound.Play();
+            Invoke("myGameOverCall",0.7f);
         }
 
         if(collision.gameObject.tag == "Obstacle"){
@@ -109,6 +126,7 @@ public class Player : MonoBehaviour {
     //---------------------------------------------------------------------------------
     // Use this for initialization
     void Start () {
+        win = false;
         speed = 0.2f;
         climbSpeed = 30f;
         cameraSpeed = 0.3f;
@@ -145,15 +163,15 @@ public class Player : MonoBehaviour {
 
             //CONTROLLING GROUND COLLISION _______________________________________________________
             // do it by comparing y axis position in this frame and the one of the previous frame
-            y_now = transform.position.y;
-            if((int)(y_now*1000) != (int)(y_previous_frame*1000) ){ //comparing 1 decimal place
-                if(grounded == true) {
-                    grounded = false;
-                }
-            }
-            else if(grounded == false){
-                grounded = true;
-            }
+            // y_now = transform.position.y;
+            // if((int)(y_now*1000) != (int)(y_previous_frame*1000) ){ //comparing 1 decimal place
+            //     if(grounded == true) {
+            //         grounded = false;
+            //     }
+            // }
+            // else if(grounded == false){
+            //     grounded = true;
+            // }
             
             //happens in the end of the code:
             //y_previous_frame = y_now;
@@ -223,27 +241,29 @@ public class Player : MonoBehaviour {
 
             //CAMERA ____________________________________________________________________________
             //camera follows character in x axis:
-            Vector3 auxiliarVector = new Vector3(transform.position.x, cm.transform.position.y, cm.transform.position.z);
-            cm.transform.position = auxiliarVector + new Vector3(distance_cm_player_x, 0.0f, 0.0f);
+            if(!win) {
+                Vector3 auxiliarVector = new Vector3(transform.position.x, cm.transform.position.y, cm.transform.position.z);
+                cm.transform.position = auxiliarVector + new Vector3(distance_cm_player_x, 0.0f, 0.0f);
 
-            //camera sometimes follows in the y axis hehe:
-            if( Math.Abs(cm.transform.position.y - transform.position.y) > distance_cm_player_y ) {
-                cameraAlignment = false;
-            }
+                //camera sometimes follows in the y axis hehe:
+                if( Math.Abs(cm.transform.position.y - transform.position.y) > distance_cm_player_y ) {
+                    cameraAlignment = false;
+                }
 
-            if(cameraAlignment == false && cm.transform.position.y > transform.position.y){ //player bellow the camera
-                cm.transform.position += new Vector3(0.0f, (y_now - y_previous_frame), 0.0f);
-            }
-            else if(cameraAlignment == false && cm.transform.position.y < transform.position.y){//player above the camera
-                //cm.transform.position += new Vector3(0.0f, cameraSpeed, 0.0f);
-                cm.transform.position += new Vector3(0.0f, (y_now - y_previous_frame), 0.0f);
-            }
+                if(cameraAlignment == false && cm.transform.position.y > transform.position.y){ //player bellow the camera
+                    cm.transform.position += new Vector3(0.0f, (y_now - y_previous_frame), 0.0f);
+                }
+                else if(cameraAlignment == false && cm.transform.position.y < transform.position.y){//player above the camera
+                    //cm.transform.position += new Vector3(0.0f, cameraSpeed, 0.0f);
+                    cm.transform.position += new Vector3(0.0f, (y_now - y_previous_frame), 0.0f);
+                }
 
-            if(Math.Abs(cm.transform.position.y - transform.position.y) <= distance_cm_player_y){
-                cameraAlignment = true;    
-            }
+                if(Math.Abs(cm.transform.position.y - transform.position.y) <= distance_cm_player_y){
+                    cameraAlignment = true;    
+                }
 
-            y_previous_frame = y_now;
+                y_previous_frame = y_now;
+            }
       
         } //ALL OF IT JUST HAPPENS IF PLAYER IS ALIVE
 	}

@@ -9,7 +9,9 @@ public class UiController : MonoBehaviour {
 	public bool paused;
 	public GameObject PausePanel;
 	public GameObject GameOverPanel;
+	public GameObject WinPanel;
 	public Player player;
+	public AudioSource deathSound;
 
 	Button[] options;
 	Button[] optionsGameOver; // game over menu options
@@ -23,6 +25,7 @@ public class UiController : MonoBehaviour {
 		//disables pause
 		PausePanel.SetActive(false);
 		GameOverPanel.SetActive(false);
+		WinPanel.SetActive(false);
 		paused = false;
 	}
 
@@ -39,17 +42,29 @@ public class UiController : MonoBehaviour {
 		Time.timeScale = 1;
 	}
 
-	private void Start() {
-		options = PausePanel.GetComponentsInChildren<Button>();
-		optionsGameOver = GameOverPanel.GetComponentsInChildren<Button>();
-		selected = 0;
-	}
-
 	public void GameOver() {
+		//play gameover song
+		optionsGameOver = GameOverPanel.GetComponentsInChildren<Button>();
 		selected = 0;
 		paused = true;
 		Time.timeScale = 0;
 		GameOverPanel.SetActive(true);
+	}
+
+	public void Win() {
+		optionsGameOver = WinPanel.GetComponentsInChildren<Button>();
+		selected = 0;
+		paused = true;
+		Time.timeScale = 0;
+		WinPanel.SetActive(true);
+	}
+
+	
+	private void Start() {
+		deathSound = GetComponent<AudioSource>();
+		options = PausePanel.GetComponentsInChildren<Button>();
+		optionsGameOver = GameOverPanel.GetComponentsInChildren<Button>();
+		selected = 0;
 	}
 
 	private void Update() {
@@ -81,7 +96,7 @@ public class UiController : MonoBehaviour {
 			// Selecting current button
 			options[selected].Select();
 		}
-		if(GameOverPanel.activeSelf){
+		if(GameOverPanel.activeSelf || WinPanel.activeSelf){
 			//if game is paused, check for inputs to cycle between options
 			if(Input.GetKeyDown(KeyCode.UpArrow)){
 				selected -= 1;
