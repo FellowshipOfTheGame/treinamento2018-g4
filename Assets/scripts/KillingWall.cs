@@ -18,6 +18,11 @@ public class KillingWall : MonoBehaviour {
 	bool wallCollision = false;
 	bool showingUp = true;
 
+	public float initialSpeed; //13
+	public float normalSpeed;  //10
+	public float speedWithObstacle; //8
+
+
 	Rigidbody2D rb;
 
 
@@ -34,18 +39,19 @@ public class KillingWall : MonoBehaviour {
 		player = GameObject.FindGameObjectWithTag("player");
 		ui = FindObjectsOfType<UiController>()[0];
 
-		distFromPlayer = 9f;
-		distInitial = 12f;
+		distFromPlayer = 7f;
+		distInitial = 13f;
 		initialForwardSpeed = 0.09f;
-		forwardSpeed = 0.14f;
+		forwardSpeed = 0.7f;
 		backwardSpeed = 0.03f;
 		playerScript = player.gameObject.GetComponent<Player>();
-		transform.position = new Vector3(player.transform.position.x-distInitial, transform.position.y, 0f);
+		transform.position = new Vector3(player.transform.position.x-distInitial, transform.position.y+1.5f, 0f);
 
 		//so that wall only collides with player
         Physics2D.IgnoreLayerCollision(11, 8, true);
         Physics2D.IgnoreLayerCollision(11, 10, true);		        
 		Physics2D.IgnoreLayerCollision(11, 12, true);
+		Physics2D.IgnoreLayerCollision(11, 14, true);
 
 		rb = GetComponent<Rigidbody2D>();
 		rb.gravityScale = 12;
@@ -55,13 +61,14 @@ public class KillingWall : MonoBehaviour {
 	// Update is called once per frame ----------------------------------------------------------------
 	void Update () {
 		if(!ui.paused){
-			if(playerScript.wallCollision == true) wallCollision = true;
+			//if(playerScript.wallCollision == true) wallCollision = true;
 
-			if(playerScript.alive == true && wallCollision == false){
+			if(playerScript.alive == true){
 
 				//showing up on screen:
 				if(showingUp == true){
-					transform.position += new Vector3(playerScript.speed+initialForwardSpeed, 0f, 0f);
+					//transform.position += new Vector3(playerScript.speed+initialForwardSpeed, 0f, 0f);
+					 rb.velocity = new Vector2(initialSpeed,rb.velocity.y);
 					if(Mathf.Abs(transform.position.x - player.transform.position.x) <= distFromPlayer) showingUp = false;
 				}
 				else{
@@ -69,27 +76,26 @@ public class KillingWall : MonoBehaviour {
 					//wall follows player only if it is running (did not collide with an obstacle):
 					//obs: wall is a little slower
 					if(playerScript.obstacleCollision == false &&  killPlayer == false){
-						transform.position += new Vector3((playerScript.speed-backwardSpeed) , 0f, 0f);
+						//..transform.position += new Vector3((playerScript.speed-backwardSpeed) , 0f, 0f);
+						rb.velocity = new Vector2(normalSpeed,rb.velocity.y);
 					}
+				
 					//otherwise, it goes a little forward:
 					else if(killPlayer == false){
-						//so that it looks like wall walks a little forwards:
-						transform.position += new Vector3(-(playerScript.speedBackAux-forwardSpeed), 0f, 0f);
-						distFromPlayer = Mathf.Abs(transform.position.x-player.transform.position.x);
+						//so that it looks like wall walks a little forwards:	
+						rb.velocity = new Vector2(speedWithObstacle,rb.velocity.y);
+						//distFromPlayer = Mathf.Abs(transform.position.x-player.transform.position.x);
 					}
-
+				
 					//if wall collides with player, he dies...
 					else {
 						playerScript.alive = false;
 						playerScript.obstacleCollision = false;
 					}
+					distFromPlayer = Mathf.Abs(transform.position.x-player.transform.position.x);
 
 				}//end else
 
-			}
-			//if player reaches a wall, the killingWall disappear
-			else{
-				transform.position += new Vector3(-backwardSpeed*9 , 0f, 0f);
 			}
 
 			//if wall stops being redered, ir is destoied

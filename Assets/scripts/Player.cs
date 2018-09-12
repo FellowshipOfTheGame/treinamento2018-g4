@@ -135,7 +135,7 @@ public class Player : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
 		rb.gravityScale = gravityValue;
         distance_cm_player_x = Math.Abs(cm.transform.position.x - transform.position.x);
-        distance_cm_player_y = Math.Abs(cm.transform.position.y - transform.position.y) + 0.07f;
+        distance_cm_player_y = Math.Abs(cm.transform.position.y - transform.position.y);
 
         y_previous_frame = y_now = transform.position.y;
 
@@ -163,18 +163,18 @@ public class Player : MonoBehaviour {
 
             //CONTROLLING GROUND COLLISION _______________________________________________________
             // do it by comparing y axis position in this frame and the one of the previous frame
-            // y_now = transform.position.y;
-            // if((int)(y_now*1000) != (int)(y_previous_frame*1000) ){ //comparing 1 decimal place
-            //     if(grounded == true) {
-            //         grounded = false;
-            //     }
-            // }
-            // else if(grounded == false){
-            //     grounded = true;
-            // }
+            y_now = transform.position.y;
+            if((int)(y_now*1000) != (int)(y_previous_frame*1000) ){ //comparing 1 decimal place
+                if(grounded == true) {
+                    grounded = false;
+                }
+            }
+            else if(grounded == false){
+                grounded = true;
+            }
             
-            //happens in the end of the code:
-            //y_previous_frame = y_now;
+            // happens in the end of the code:
+            y_previous_frame = y_now;
 
             //RUNNING ____________________________________________________________________________    
             //forever running if is not in contact with a wall
@@ -246,7 +246,7 @@ public class Player : MonoBehaviour {
                 cm.transform.position = auxiliarVector + new Vector3(distance_cm_player_x, 0.0f, 0.0f);
 
                 //camera sometimes follows in the y axis hehe:
-                if( Math.Abs(cm.transform.position.y - transform.position.y) > distance_cm_player_y ) {
+                if( Math.Abs(cm.transform.position.y - transform.position.y) > distance_cm_player_y-0.3f ) {
                     cameraAlignment = false;
                 }
 
