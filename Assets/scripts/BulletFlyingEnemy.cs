@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BulletFlyingEnemy : MonoBehaviour {
-	Renderer rend;
+	public UiController ui;
 
+	Renderer rend;
 	float speed;
 	bool playerCollision = false;
 	bool groundCollision = false;
@@ -27,6 +28,7 @@ public class BulletFlyingEnemy : MonoBehaviour {
 	//-------------------------------------------------------------------------------------------
 	// Use this for initialization
 	void Start () {
+		ui = FindObjectsOfType<UiController>()[0];
 		rend = GetComponent<Renderer>();
 		player = GameObject.Find("R foot");
 		whereToGo = new Vector3(player.transform.position.x + (0.94f/0.02f)*0.2f /* (time/timePerFrame)*playerSpeed*/ , player.transform.position.y, 0f);
@@ -37,7 +39,9 @@ public class BulletFlyingEnemy : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		previousPosition = transform.position;
-		transform.position = Vector3.MoveTowards(transform.position, whereToGo, speed);
+		if(!ui.paused){
+			transform.position = Vector3.MoveTowards(transform.position, whereToGo, speed);
+		}
 
 		if(playerCollision == true || groundCollision == true || previousPosition == transform.position) 
 			Destroy(this.gameObject);

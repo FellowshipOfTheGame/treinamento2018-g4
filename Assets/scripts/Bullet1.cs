@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Bullet1 : MonoBehaviour {
 
+	UiController ui;
 	Rigidbody2D rb;
 	Renderer rend;
 
@@ -23,18 +24,18 @@ public class Bullet1 : MonoBehaviour {
 	//-------------------------------------------------------------------------------------------
 	// Use this for initialization
 	void Start () {
+		ui = FindObjectsOfType<UiController>()[0];
 		rb = GetComponent<Rigidbody2D>();
 		rend = GetComponent<Renderer>();
-		speed = 0.3f;
+		speed = 0.4f;
 	}
 	
 	//-------------------------------------------------------------------------------------------
 	// Update is called once per frame
 	void Update () {
-		//rb.AddRelativeForce(Vector3.left * force);
-		transform.position += new Vector3(-speed, 0f, 0f);
+		if(!ui.paused)
+			transform.position += new Vector3(-speed, 0f, 0f);
 		if(playerCollision == true || !rend.isVisible) 
 			Destroy(this.gameObject, 0.07f);
-
 	}
 }
