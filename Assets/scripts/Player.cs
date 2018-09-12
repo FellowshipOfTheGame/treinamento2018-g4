@@ -53,6 +53,9 @@ public class Player : MonoBehaviour {
     public Animator anim;
     private float VSpeed;
 
+    //Ui control for game over
+    public UiController ui;
+
     //---------------------------------------------------------------------------------
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.tag == "Sensor"){
@@ -76,10 +79,12 @@ public class Player : MonoBehaviour {
 
         if(collision.gameObject.tag == "bullet"){
             alive = false;
+            ui.GameOver();
         }
 
         if(collision.gameObject.tag == "killingWall"){
             alive = false;
+            ui.GameOver();
         }
 
         if(collision.gameObject.tag == "Obstacle"){
@@ -241,8 +246,5 @@ public class Player : MonoBehaviour {
             y_previous_frame = y_now;
       
         } //ALL OF IT JUST HAPPENS IF PLAYER IS ALIVE
-        else{
-            backgroundSound.Stop();
-        }
 	}
 }
