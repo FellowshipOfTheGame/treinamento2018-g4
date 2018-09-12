@@ -32,7 +32,7 @@ public class BulletFlyingEnemy : MonoBehaviour {
 		rend = GetComponent<Renderer>();
 		player = GameObject.Find("R foot");
 		whereToGo = new Vector3(player.transform.position.x + (0.94f/0.02f)*0.2f /* (time/timePerFrame)*playerSpeed*/ , player.transform.position.y, 0f);
-		speed = 0.4f;
+		speed = 0.2f;
 	}
 	
 	//-------------------------------------------------------------------------------------------

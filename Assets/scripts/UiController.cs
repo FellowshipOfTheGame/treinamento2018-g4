@@ -29,7 +29,7 @@ public class UiController : MonoBehaviour {
 
 	public void homeButton() {
 		//Loads home menu scene
-		SceneManager.LoadScene("HomeScene");
+		SceneManager.LoadScene("MainMenu");
 		Time.timeScale = 1;
 	}
 
