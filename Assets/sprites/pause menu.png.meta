@@ -1,18 +1,20 @@
 fileFormatVersion: 2
-guid: 73a49eb3d5ebeb34a9f7781c0d64d347
+guid: 43b20c94716d73745af41015dcc54d20
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Tittle screen_0
-    21300002: Tittle screen_1
-    21300004: Tittle screen_2
-    21300006: Tittle screen_3
-    21300008: Tittle screen_4
-    21300010: Tittle screen_5
-    21300012: Tittle screen_6
-    21300014: Tittle screen_7
-    21300016: Tittle screen_8
-    21300018: Tittle screen_9
-    21300020: Tittle screen_10
+    21300000: pause menu_0
+    21300002: pause menu_1
+    21300004: pause menu_2
+    21300006: pause menu_3
+    21300008: pause menu_4
+    21300010: pause menu_5
+    21300012: pause menu_6
+    21300014: pause menu_7
+    21300016: pause menu_8
+    21300018: pause menu_9
+    21300020: pause menu_10
+    21300022: pause menu_11
+    21300024: pause menu_12
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -42,7 +44,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: -1
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -52,13 +54,13 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 32
+  spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 200
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 0
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -74,7 +76,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -85,7 +87,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -95,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tittle screen_0
+      name: pause menu_0
       rect:
         serializedVersion: 2
-        x: 837
-        y: 2332
-        width: 2058
-        height: 800
+        x: 0
+        y: 1160
+        width: 399
+        height: 400
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -109,19 +111,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 82714fcfeea93094a90da6d42f33dba9
+      spriteID: 5f633978e38817c48a8b1d7761193731
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tittle screen_1
+      name: pause menu_1
       rect:
         serializedVersion: 2
-        x: 696
-        y: 1440
-        width: 2058
-        height: 809
+        x: 198
+        y: 1191
+        width: 1858
+        height: 427
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -129,19 +131,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb7d912e1916c0847bdec99642d98dcf
+      spriteID: a18a0665dcc29bf47b1c3afa1fb733c6
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tittle screen_2
+      name: pause menu_2
       rect:
         serializedVersion: 2
-        x: 3539
-        y: 2454
-        width: 1992
-        height: 534
+        x: 603
+        y: 1186
+        width: 401
+        height: 398
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,19 +151,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed5f2141d6943e142826565490ccf09c
+      spriteID: aebd7acbd282a1d44956f78a99250858
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tittle screen_3
+      name: pause menu_3
       rect:
         serializedVersion: 2
-        x: 3327
-        y: 1472
-        width: 2003
-        height: 514
+        x: 1813
+        y: 1189
+        width: 399
+        height: 399
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,39 +171,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b173fb0f5f368044caf452974e389a50
+      spriteID: 698bf3dbba7e52b46b2c501224976582
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tittle screen_4
+      name: pause menu_4
       rect:
         serializedVersion: 2
-        x: 3435
-        y: 581
-        width: 1065
-        height: 685
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 33, y: 36, z: 36, w: 36}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6411984d3a451144eab9e263cb69eb37
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tittle screen_5
-      rect:
-        serializedVersion: 2
-        x: 1123
-        y: 906
-        width: 594
-        height: 241
+        x: 643
+        y: 735
+        width: 216
+        height: 238
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -209,19 +191,119 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eae1c9556d98e1c4a8141a17ab157a84
+      spriteID: dd8ec2418f18e2e47a0b8a534665fb01
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tittle screen_6
+      name: pause menu_5
       rect:
         serializedVersion: 2
-        x: 2040
-        y: 901
-        width: 594
-        height: 244
+        x: 883
+        y: 735
+        width: 176
+        height: 164
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 785f58d6e55800a48aaf42ae469932a2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pause menu_6
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 735
+        width: 163
+        height: 164
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b9044889352503479e1c124060e6c13
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pause menu_7
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 735
+        width: 160
+        height: 164
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae2995e25212a7d43ac37275e8400186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pause menu_8
+      rect:
+        serializedVersion: 2
+        x: 1447
+        y: 735
+        width: 164
+        height: 164
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22c0715811cab9943a32108d4301f223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pause menu_9
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 186
+        width: 332
+        height: 304
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6e76253f739e0c4088fd15bfe3676a3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pause menu_10
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 181
+        width: 334
+        height: 310
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,19 +311,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 090e4abda1d80df40be3a830d07d8705
+      spriteID: 53baf9a39837853408ca87124e3b0643
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tittle screen_7
+      name: pause menu_11
       rect:
         serializedVersion: 2
-        x: 1053
-        y: 556
-        width: 700
-        height: 159
+        x: 1145
+        y: 183
+        width: 336
+        height: 308
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -249,19 +331,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d8496a4b0b41af4d9559dd2c6dd7d1c
+      spriteID: 1051aa04bfeaaf34ebc9fd143ee7bd18
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tittle screen_8
+      name: pause menu_12
       rect:
         serializedVersion: 2
-        x: 1120
-        y: 142
-        width: 530
-        height: 241
+        x: 1517
+        y: 181
+        width: 335
+        height: 310
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -269,47 +351,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41e0eafc54d441a4b993a80a8a0ad34a
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tittle screen_9
-      rect:
-        serializedVersion: 2
-        x: 2041
-        y: 106
-        width: 528
-        height: 239
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2029ee7005af2344c947cda30a670456
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tittle screen_10
-      rect:
-        serializedVersion: 2
-        x: 1965
-        y: 555
-        width: 700
-        height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a68bf7cf54c456940b0e6f1d9e2243f0
+      spriteID: 32e6ac24c25029c4aa5372218949a72e
       vertices: []
       indices: 
       edges: []
@@ -317,7 +359,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 3d4dcbd7d0e228e4fb83cb474d52aaef
+    spriteID: 3e8f395a7236b1e4ebfefb1730cb1285
     vertices: []
     indices: 
     edges: []

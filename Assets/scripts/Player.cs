@@ -15,7 +15,8 @@ public class Player : MonoBehaviour {
     
 
     public float jump_force;
-    public float speed;
+    public float speed; //this is used for other components movement
+    public float trueSpeed; //this is used in this component movement
     public float climbSpeed;
     public float cameraSpeed;
     public float  gravityValue;
@@ -53,6 +54,13 @@ public class Player : MonoBehaviour {
     private float VSpeed;
 
     //---------------------------------------------------------------------------------
+    private void OnTriggerEnter2D(Collider2D other) {
+        if(other.gameObject.tag == "Sensor"){
+            sensorCollision = true;
+        }
+    }
+
+
     private void OnCollisionEnter2D(Collision2D collision){
         //colliding with the wall:
         if (collision.gameObject.tag == "wall") {
@@ -70,13 +78,13 @@ public class Player : MonoBehaviour {
             alive = false;
         }
 
+        if(collision.gameObject.tag == "killingWall"){
+            alive = false;
+        }
+
         if(collision.gameObject.tag == "Obstacle"){
             obstacleCollision = true;
             trashCollisionSound.Play();
-        }
-
-        if(collision.gameObject.tag == "Sensor"){
-            sensorCollision = true;
         }
     }
     //---------------------------------------------------------------------------------
@@ -148,7 +156,8 @@ public class Player : MonoBehaviour {
             //RUNNING ____________________________________________________________________________    
             //forever running if is not in contact with a wall
             if (wallCollision == false && obstacleCollision == false) {
-                transform.position += new Vector3(speed, 0, 0);
+                rb.velocity = new Vector2(trueSpeed,rb.velocity.y);
+                // transform.position += new Vector3(speed, 0, 0);
             }
 
             //JUMP ____________________________________________________________________________
